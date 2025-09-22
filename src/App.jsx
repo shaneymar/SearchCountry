@@ -37,23 +37,23 @@ function App() {
       className='searchBar'
       />
    
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-  {filteredCountries.length > 0
-    ? filteredCountries.map((country) => (
-        <div key={country.common} className="countryCard">
-          <img
-            src={country.png}
-            alt={country.common}
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
-          />
-          <h3>{country.common}</h3>
+    <div style={{display:'flex', flexWrap:'wrap',gap:'20px'}}>
+      {filteredCountries.length > 0 ? (
+        filteredCountries.map((country) => (
+        <div 
+        key={country.common}
+        className='countryCard'>
+
+        <img src={country.png} alt={country.common}
+         style={{width:'100px', height:'100px',objectFit:'cover'}}/>
+        <h3>{country.common}</h3>
         </div>
+
       ))
-    : countries.length === 0
-    ? <p>Loading...</p>   
-    : <p>No Countries Found</p>
-  }
-</div>
+      ): (
+        <p>No Countries Found</p>
+      )}
+    </div>
     </div>
   )
 }
