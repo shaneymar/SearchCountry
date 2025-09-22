@@ -46,7 +46,7 @@ function App() {
 
         <img src={country.png} alt={country.common}
          style={{width:'100px', height:'100px',objectFit:'cover'}}/>
-        <h3>{country.common}</h3>
+        <p>{country.common}</p>
         </div>
 
       ))
